@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1>Just do it  </h1>
+    <button id='button'>click me</button>
+    <h2 id='name'></h2>
+
+
+    <script>
+
+        $('document').ready (function(){
+
+            $('#button').click (function(){
+
+            $.get("https://api.github.com/users/kianchachi", displayName)
+            function displayName(data) {
+                $("#name").text (data.login)
+                console.log(data.name);
+            }
+
+
+
+
+        });
+        });
+    
+
+
+        
+
+    
+    </script>
+</body>
+</html>
